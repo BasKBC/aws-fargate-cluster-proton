@@ -8,10 +8,8 @@ schema:
       description: "Input properties for my environment"
       properties:
         vpc_to_be_used:
-          title: "VPC to use"
+          title: "VPC ID for environment"
           type: string
-          default: 172.31.0.0/16
-          pattern: ([0-9]{1,3}\.){3}[0-9]{1,3}($|/(16|24))
           description: "Choose the VPC where the cluster will be deployed"
         subnet_one_cidr:
           title: "Subnet one CIDR"
