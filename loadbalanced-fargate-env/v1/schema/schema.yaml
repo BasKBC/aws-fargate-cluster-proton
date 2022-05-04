@@ -9,8 +9,8 @@ schema:
       properties:
         vpc_to_be_used:
           title: "VPC to use"
-          type: "List<AWS::EC2::VPC::Id>"
-          default: vpc-0ac140cc01386bfa4
+          type: string
+          default: 172.31.0.0/16
           description: "Choose the VPC where the cluster will be deployed"
         subnet_one_cidr:
           title: "Subnet one CIDR"
