@@ -4,8 +4,6 @@ Description: AWS Fargate cluster running containers in a public subnet. Only sup
 Mappings:
   # The VPC and subnet configuration is passed in via the environment spec.
   SubnetConfig:
-    VPC:
-      CIDR: Fn::GetAtt:['{{ environment.inputs.vpc_to_be_used}}', CidrBlock]
     PublicOne:
       CIDR: '{{ environment.inputs.subnet_one_cidr}}'
     PublicTwo:
@@ -16,7 +14,7 @@ Resources:
     Properties:
       EnableDnsSupport: true
       EnableDnsHostnames: true
-      CidrBlock: !FindInMap ['SubnetConfig', 'VPC', 'CIDR']
+      CidrBlock:
 
   # Two public subnets, where containers will have public IP addresses
   PublicSubnetOne:
