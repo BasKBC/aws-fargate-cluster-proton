@@ -12,12 +12,10 @@ schema:
           type: string
           description: "Choose the VPC where the cluster will be deployed"
         subnet_one_cidr:
-          title: "Subnet one CIDR"
+          title: "Subnet one ID"
           type: string
-          description: "The CIDR range for subnet one"
-          default: 10.0.0.0/24
+          description: "The first subnet ID"
         subnet_two_cidr:
-          title: "Subnet two CIDR"
+          title: "Subnet two ID"
           type: string
-          description: "The CIDR range for subnet two"
-          default: 10.0.1.0/24
+          description: "The second subnet ID"
